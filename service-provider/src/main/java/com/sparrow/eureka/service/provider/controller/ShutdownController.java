@@ -16,7 +16,6 @@ public class ShutdownController {
 
     @GetMapping("/shutdown")
     public void shutdown() {
-//        EurekaModule
         eurekaClient.shutdown();
     }
 }
