@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: service-consumer
+server:
+  port: 8300
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 开启健康检查（需要spring-boot-starter-actuator依赖）
+    healthcheck:
+      enabled: true
+    service-url:
+      # eureka服务器的地址（注意：地址最后面的 /eureka/ 这个是固定值）
+      default-zone: http://127.0.0.1:8761/eureka

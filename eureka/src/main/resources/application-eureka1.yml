@@ -1,0 +1,11 @@
+spring:
+  profiles: eureka1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: sparrow-eureka1
+  client:
+    service-url:
+    # eureka服务器的地址（注意：地址最后面的 /eureka/ 这个是固定值）
+      default-zone: http://127.0.0.1:8762/eureka,http://127.0.0.1:8763/eureka

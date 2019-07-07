@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+eureka:
+  environment: dev
+  instance:
+    hostname: localhost
+  server:
+    # 关闭自我保护
+    enable-self-preservation: false
+    # 清理无效节点的时间间隔，默认60000毫秒，即60秒
+    eviction-interval-timer-in-ms: 5000
+  client:
+    #不把自己注册到Eureka上
+    register-with-eureka: false
+    #不从Eureka获取注册信息
+    fetch-registry: false
+    service-url:
+      # eureka服务器的地址（注意：地址最后面的 /eureka/ 这个是固定值）
+      default-zone: http://127.0.0.1:8761/eureka

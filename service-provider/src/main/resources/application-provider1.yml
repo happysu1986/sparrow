@@ -1,0 +1,4 @@
+spring:
+  profiles: provider1
+server:
+  port: 8200

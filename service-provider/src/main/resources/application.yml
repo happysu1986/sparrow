@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: service-provider
+server:
+  port: 8200
+eureka:
+  instance:
+    hostname: localhost
+    # 续约更新时间间隔（默认30秒）
+    lease-renewal-interval-in-seconds: 30
+    # 续约到期时间（默认90秒）
+    lease-expiration-duration-in-seconds: 90
+  client:
+    #不从Eureka获取注册信息
+    fetch-registry: false
+    # 开启健康检查（需要spring-boot-starter-actuator依赖）
+    healthcheck:
+      enabled: true
+    service-url:
+      # eureka服务器的地址（注意：地址最后面的 /eureka/ 这个是固定值）
+      default-zone: http://127.0.0.1:8761/eureka
+#logging.level.com.netflix.discovery: DEBUG
