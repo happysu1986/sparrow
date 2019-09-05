@@ -6,7 +6,8 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.9.RELEASE</version>
+    <version>2.0.1.RELEASE</version>
+    <relativePath/>
   </parent>
 
   <groupId>com.sparrow</groupId>
@@ -25,6 +26,7 @@
     <mybatis.version>3.4.5</mybatis.version>
     <gson.version>2.7</gson.version>
     <guava.version>19.0</guava.version>
+    <spring-cloud.version>Finchley.SR1</spring-cloud.version>
   </properties>
 
   <modules>
@@ -112,6 +114,13 @@
       <!--<type>pom</type>-->
       <!--<scope>import</scope>-->
       <!--</dependency>-->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
       <!-- Test -->
       <dependency>
