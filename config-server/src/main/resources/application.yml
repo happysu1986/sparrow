@@ -1,0 +1,13 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: sparrow-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/happysu1986/configs.git
+          search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: happysu1986@163.com
+          password: 37152619abc
